@@ -30,7 +30,7 @@ class Action(Enum):
 
 class Environment():
 
-    def __init__(self, grid, move_prob=0.8):
+    def __init__(self, grid, move_prob=1.0):
         # grid is 2d-array. Its values are treated as an attribute.
         # Kinds of attribute is following.
         #  0: ordinary cell
