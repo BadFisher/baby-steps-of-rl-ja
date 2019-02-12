@@ -22,7 +22,7 @@ def main():
     agent = Agent(env)
 
     # Try 10 game.
-    for i in range(10):
+    for i in range(1):
         # Initialize position of agent.
         state = env.reset()
         total_reward = 0
@@ -30,9 +30,11 @@ def main():
 
         while not done:
             action = agent.policy(state)
+            print("action: ",action)
             next_state, reward, done = env.step(action)
             total_reward += reward
             state = next_state
+            print("state: ",state)
 
         print("Episode {}: Agent gets {} reward.".format(i, total_reward))
 
